@@ -1,8 +1,36 @@
 apply plugin: 'com.android.library'
 
+
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'stublib'
+
+    publishedGroupId = 'me.dannysuen.stublib'
+    libraryName = 'stublib'
+    artifact = 'stub-lib'
+
+    libraryDescription = 'A stub lib for testing shared code by jcenter'
+
+    siteUrl = 'https://github.com/dannsyuen/stublib'
+    gitUrl = 'https://github.com/dannysuen/stublib.git'
+
+    libraryVersion = '1.0'
+
+    developerId = 'dannysuen'
+    developerName = 'Danny Suen'
+    developerEmail = 'sunnyhust2005@qq.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.0"
+
 
     defaultConfig {
         minSdkVersion 8
@@ -22,3 +50,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.0.0'
 }
+
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+
