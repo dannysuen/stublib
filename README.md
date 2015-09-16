@@ -1,1 +1,1 @@
-Jcenter tryout
+This project aims to try how to upload an stub Android library to Bintray's maven repo.

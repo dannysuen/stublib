@@ -8,8 +8,8 @@ android {
         applicationId "me.dannysuen.sharedlib"
         minSdkVersion 8
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.1"
     }
     buildTypes {
         release {
@@ -19,9 +19,17 @@ android {
     }
 }
 
+repositories {
+    maven {
+        url "https://dl.bintray.com/dannysuen/maven"
+    }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.0.0'
 
-    compile project(':stublib')
+    compile 'me.dannysuen.stublib:stublib:1.0.1'
+//    compile project(':stublib')
+
 }

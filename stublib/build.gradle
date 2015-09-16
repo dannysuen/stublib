@@ -7,15 +7,15 @@ ext {
     bintrayName = 'stublib'
 
     publishedGroupId = 'me.dannysuen.stublib'
-    libraryName = 'stublib'
-    artifact = 'stub-lib'
+    libraryName = 'StubLib'
+    artifact = 'stublib'
 
     libraryDescription = 'A stub lib for testing shared code by jcenter'
 
     siteUrl = 'https://github.com/dannsyuen/stublib'
     gitUrl = 'https://github.com/dannysuen/stublib.git'
 
-    libraryVersion = '1.0'
+    libraryVersion = '1.0.2'
 
     developerId = 'dannysuen'
     developerName = 'Danny Suen'
@@ -35,8 +35,8 @@ android {
     defaultConfig {
         minSdkVersion 8
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.1"
     }
     buildTypes {
         release {
@@ -48,7 +48,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.0.0'
 }
 
 
